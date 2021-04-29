@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: test
+
+  security:
+    enabled: true
+
+  http:
+    client:
+      read-timeout: 60s
+    services:
+      internal-propagation-service:
+        url: "http://localhost:9000"
+        read-timeout: 60s
+
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
